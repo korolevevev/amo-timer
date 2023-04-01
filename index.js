@@ -13,6 +13,7 @@ const createTimerAnimator = () => {
     }
     const showTimeLeft = () => {
       if (timeLeft <= 0 && timerID) {
+
         clearInterval(timerID)
       }
 
@@ -28,6 +29,9 @@ const createTimerAnimator = () => {
         mm = mm < 10 ? '0' + mm : mm
         ss = ss < 10 ? '0' + ss : ss
         timerEl.textContent = hh + ':' + mm + ':' + ss
+        if (timerEl.textContent === '00:00:00') {
+          timerEl.textContent = 'Время вышло'
+        }
         timeLeft -= 1
       }
     }
