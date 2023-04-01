@@ -1,0 +1,40 @@
+body {
+    height: 100%;
+    padding: 30px;
+    font-family: "Gotham Pro", sans-serif;
+}
+#form {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+input {
+    border: 1px solid darkgray;
+    border-radius: 8px;
+    height: 60px;
+    padding-left: 15px;
+    width: 200px;
+    font-size: 20px;
+}
+button {
+    height: 63px;
+    width: 100px;
+    border-radius: 8px;
+    border: 1px solid lightslategray;
+    background: lightslategray;
+    color: white;
+    font-family: "Gotham Pro", sans-serif;
+}
+button:hover {
+    opacity: 70%;
+    transition: opacity 0.2s;
+}
+span {
+    font-size: 100px;
+    color: deeppink;
+}
+#footnote {
+    position: absolute;
+    bottom: 50px;
+    color: grey;
+}

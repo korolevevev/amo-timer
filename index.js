@@ -13,11 +13,8 @@ const createTimerAnimator = () => {
     }
     const showTimeLeft = () => {
       if (timeLeft <= 0 && timerID) {
-
         clearInterval(timerID)
       }
-
-      // let hh = Math.floor(timeLeft / 60 / 60) % 24;
       let hh = Math.floor(timeLeft / 60 / 60);
       if(hh > 1000000) {
         timerEl.textContent = 'Значение слишком большое'
@@ -62,7 +59,9 @@ buttonEl.addEventListener('click', () => {
 
   const seconds = Number(inputEl.value);
 
-  animateTimer(seconds);
+  if (seconds) {
+    animateTimer(seconds);
+  }
 
   inputEl.value = '';
 });
